@@ -58,4 +58,19 @@ public class MemberServiceTest {
     }
 
 
+    //test delete
+    @Test
+    void deleteMember_shouldDeleteMemberModel() throws BadRequestException {
+        // mock data
+        String mobile = "123456789";
+        MemberModel mockMemberModel = new MemberModel();
+        mockMemberModel.setId(1L);
+        mockMemberModel.setMobile(mobile);
+
+        when(memberRepository.findByMobile(mobile)).thenReturn(mockMemberModel);
+        memberService.deleteByMobile(mobile);
+        verify(memberRepository, times(1)).delete(mockMemberModel);
+    }
+
+
 }
