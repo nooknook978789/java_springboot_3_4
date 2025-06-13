@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.north.springboot3_4.MemberControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-13T10:15:56.994Z" hostname="MacBook-Pros-Nooknook.local" time="0.435">
+  <properties/>
+  <testcase name="updateMember_shouldUpdateMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.413"/>
+  <testcase name="getMemeberByMobile_shouldHasMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.008"/>
+  <testcase name="deleteMemberByMobile_shouldReturnSuccessMessage()" classname="com.north.springboot3_4.MemberControllerTest" time="0.007"/>
+  <testcase name="addMember_shouldCreateNewMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.006"/>
+  <system-out><![CDATA[17:15:55.259 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.north.springboot3_4.MemberControllerTest]: MemberControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:55.313 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.north.springboot3_4.Springboot34Application for test class com.north.springboot3_4.MemberControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.6)
+
+2025-06-13T17:15:55.450+07:00  INFO 82233 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Starting MemberControllerTest using Java 21.0.7 with PID 82233 (started by nooknook in /Users/nooknook/Documents/github/java_springboot_3_4)
+2025-06-13T17:15:55.451+07:00  INFO 82233 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T17:15:55.798+07:00  INFO 82233 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-13T17:15:55.815+07:00  INFO 82233 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2025-06-13T17:15:55.928+07:00  INFO 82233 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-13T17:15:55.999+07:00  INFO 82233 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d791dd3e-f4bb-4c3e-ab3e-190d5a523461 user=SA
+2025-06-13T17:15:55.999+07:00  INFO 82233 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-13T17:15:56.020+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-13T17:15:56.043+07:00  INFO 82233 --- [springboot3_4] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-13T17:15:56.057+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-13T17:15:56.160+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-13T17:15:56.191+07:00  INFO 82233 --- [springboot3_4] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-13T17:15:56.464+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-13T17:15:56.476+07:00  INFO 82233 --- [springboot3_4] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-13T17:15:56.700+07:00  WARN 82233 --- [springboot3_4] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-13T17:15:56.719+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13T17:15:56.925+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-13T17:15:56.925+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-13T17:15:56.928+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-13T17:15:56.934+07:00  INFO 82233 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2025-06-13T17:15:56.961+07:00  INFO 82233 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Started MemberControllerTest in 1.602 seconds (process running for 2.023)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/nooknook/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
