@@ -46,4 +46,15 @@ public class MemberController {
         MemberModel data = memberService.updateByMobile(mobile,memberRequest);
         return ResponseEntity.status(205).body(data);
     }
+
+    // todo: 4. API name : deleteMemberByMobile
+    // todo: Endpoint : "/api/member/{mobile}"
+    // todo: Method : Delete
+    // todo: Header :
+    // todo: Body :  { name:  , email: }
+    @DeleteMapping("/{mobile}")
+    public ResponseEntity<String> deleteMemberByMobile(@PathVariable String mobile) {
+        memberService.deleteByMobile(mobile);
+        return ResponseEntity.status(200).body("Delete Success");
+    }
 }
