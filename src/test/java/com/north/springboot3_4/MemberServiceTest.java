@@ -46,7 +46,7 @@ public class MemberServiceTest {
         MemberModel mockMemberModel = new MemberModel();
         mockMemberModel.setMobile("123456789");
 
-        // Mock findByMobile ให้ไม่ return null
+        // Mock findByMobile
         when(memberRepository.findByMobile(anyString())).thenReturn(mockMemberModel);
         // Mock save
         when(memberRepository.save(any(MemberModel.class))).thenReturn(mockMemberModel);
