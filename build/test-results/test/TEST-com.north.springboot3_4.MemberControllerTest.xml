@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.north.springboot3_4.MemberControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-06-13T09:07:48.443Z" hostname="MacBook-Pros-Nooknook.local" time="0.443">
+<testsuite name="com.north.springboot3_4.MemberControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-13T09:34:06.430Z" hostname="MacBook-Pros-Nooknook.local" time="0.613">
   <properties/>
-  <testcase name="updateMember_shouldUpdateMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.427"/>
-  <testcase name="getMemeberByMobile_shouldHasMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.008"/>
+  <testcase name="updateMember_shouldUpdateMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.585"/>
+  <testcase name="getMemeberByMobile_shouldHasMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.012"/>
+  <testcase name="deleteMemberByMobile_shouldReturnSuccessMessage()" classname="com.north.springboot3_4.MemberControllerTest" time="0.008"/>
   <testcase name="addMember_shouldCreateNewMemberModel()" classname="com.north.springboot3_4.MemberControllerTest" time="0.006"/>
-  <system-out><![CDATA[16:07:46.625 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.north.springboot3_4.MemberControllerTest]: MemberControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:07:46.675 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.north.springboot3_4.Springboot34Application for test class com.north.springboot3_4.MemberControllerTest
+  <system-out><![CDATA[16:34:03.163 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.north.springboot3_4.MemberControllerTest]: MemberControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:34:03.258 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.north.springboot3_4.Springboot34Application for test class com.north.springboot3_4.MemberControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -16,18 +17,18 @@
 
  :: Spring Boot ::                (v3.4.6)
 
-2025-06-13T16:07:46.824+07:00  INFO 80448 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Starting MemberControllerTest using Java 21.0.7 with PID 80448 (started by nooknook in /Users/nooknook/Documents/github/java_springboot_3_4)
-2025-06-13T16:07:46.824+07:00  INFO 80448 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2025-06-13T16:07:47.184+07:00  INFO 80448 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-13T16:07:47.203+07:00  INFO 80448 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
-2025-06-13T16:07:47.327+07:00  INFO 80448 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-13T16:07:47.405+07:00  INFO 80448 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bb74ddbd-afc3-4863-affb-0ab5b424a148 user=SA
-2025-06-13T16:07:47.406+07:00  INFO 80448 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-13T16:07:47.428+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-13T16:07:47.454+07:00  INFO 80448 --- [springboot3_4] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
-2025-06-13T16:07:47.469+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-13T16:07:47.579+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-13T16:07:47.612+07:00  INFO 80448 --- [springboot3_4] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-13T16:34:03.544+07:00  INFO 81159 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Starting MemberControllerTest using Java 21.0.7 with PID 81159 (started by nooknook in /Users/nooknook/Documents/github/java_springboot_3_4)
+2025-06-13T16:34:03.545+07:00  INFO 81159 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T16:34:04.129+07:00  INFO 81159 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-13T16:34:04.163+07:00  INFO 81159 --- [springboot3_4] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2025-06-13T16:34:04.358+07:00  INFO 81159 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-13T16:34:04.579+07:00  INFO 81159 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:f4828317-45c5-4793-b81e-12fcf67b9509 user=SA
+2025-06-13T16:34:04.580+07:00  INFO 81159 --- [springboot3_4] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-13T16:34:04.621+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-13T16:34:04.663+07:00  INFO 81159 --- [springboot3_4] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-13T16:34:04.688+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-13T16:34:04.907+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-13T16:34:04.973+07:00  INFO 81159 --- [springboot3_4] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -35,15 +36,15 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-13T16:07:47.903+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-13T16:07:47.915+07:00  INFO 80448 --- [springboot3_4] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-13T16:07:48.117+07:00  WARN 80448 --- [springboot3_4] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-13T16:07:48.137+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-13T16:07:48.372+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-06-13T16:07:48.372+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-06-13T16:07:48.375+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-13T16:07:48.380+07:00  INFO 80448 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
-2025-06-13T16:07:48.407+07:00  INFO 80448 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Started MemberControllerTest in 1.678 seconds (process running for 2.094)
+2025-06-13T16:34:05.561+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-13T16:34:05.586+07:00  INFO 81159 --- [springboot3_4] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-13T16:34:05.965+07:00  WARN 81159 --- [springboot3_4] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-13T16:34:05.995+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13T16:34:06.340+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-13T16:34:06.341+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-13T16:34:06.344+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-13T16:34:06.351+07:00  INFO 81159 --- [springboot3_4] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+2025-06-13T16:34:06.391+07:00  INFO 81159 --- [springboot3_4] [    Test worker] c.n.springboot3_4.MemberControllerTest   : Started MemberControllerTest in 3.042 seconds (process running for 3.795)
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (/Users/nooknook/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)

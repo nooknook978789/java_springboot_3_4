@@ -8,8 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.mockito.Mockito.doNothing;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
@@ -21,6 +21,9 @@ public class MemberControllerTest {
 
     @Autowired
     private MemberRepository memberRepository;
+
+    @Autowired
+    private MemberService memberService;
 
 
     private MemberModel mockupModel;
@@ -104,4 +107,16 @@ public class MemberControllerTest {
                 .andExpect(jsonPath("$.mobile").value("099999999"))
                 .andExpect(jsonPath("$.mobile2").value("098999999"));
     }
+
+    //test Delete
+    @Test
+    void deleteMemberByMobile_shouldReturnSuccessMessage() throws Exception {
+        String mobile = "099999999";
+
+        mockMvc.perform(delete("/api/member/{mobile}", mobile))
+                .andExpect(status().is(200))
+                .andExpect(content().string("Delete Success"));
+
+    }
+
 }

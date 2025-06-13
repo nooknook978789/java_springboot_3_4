@@ -3,6 +3,8 @@ package com.north.springboot3_4;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Service
@@ -42,6 +44,7 @@ public class MemberService {
     }
 
     // delete by mobile
+    @Transactional
     public void deleteByMobile(String mobile){
         memberRepository.deleteByMobile(mobile);
     }
