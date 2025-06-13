@@ -45,9 +45,11 @@ public class MemberService {
 
     // delete by mobile
     @Transactional
-    public void deleteByMobile(String mobile){
-        memberRepository.deleteByMobile(mobile);
+    public void deleteByMobile(String mobile) {
+        MemberModel member = memberRepository.findByMobile(mobile);
+        memberRepository.delete(member);
     }
+
 
     //delete all
     public void deleteAll(){
